@@ -1,5 +1,5 @@
 <template>
-
+<!-- Basic form markup using Bootstrap 5 -->
   <div class="row d-flex justify-content-center">
     <div class="col-sm-12 w-100 mb-5">
       <h1>{{ title }}</h1>
@@ -19,8 +19,9 @@
           <input type="email" v-model="email" class="form-control" />
         </div>
         <div class="mb-3">
-          <Modal  :firstName="firstName" :lastName="lastName" :email="email"  @resetAll="manageClick"/>
+          <Modal  :firstName="firstName" :lastName="lastName" :email="email"  @resetAll="handleReset"/>
         </div>
+        <!-- demonstrate the binding here-->
         <div class="d-flex justify-content-start">
           <div class="my-3 ">
             <p class="text-start m-0 fs-6 fw-bold p-0">You are submitting : </p>
@@ -31,15 +32,10 @@
       </form>
     </div>
   </div>
-
-  
 </template>
 
-
 <script>
-  import Modal from "@/components/Modal.vue"
-  
-
+  import Modal from "@/components/Modal.vue"  
   export default {
     name: "HomeView",
     data() {
@@ -47,29 +43,20 @@
         title: "My First Vue App ever !",
         firstName : "",
         lastName : "",
-        email : "" ,
-          
+        email : "" ,          
       };
     },
     components: {
       Modal
     },
-
     methods: {
-      manageClick() {
-       console.log('clicked')
+      handleReset() {
        this.firstName=''
        this.lastName=''
        this.email=''
+       console.log('clicked')
       },
     },
   };
-    // <Modal v-bind:fname="firstName" v-bind:lname="lastName" v-bind:email="email" @resetFname="firstName = $event"/>
-
 </script>
-
-<style>
-
-
-</style>
 

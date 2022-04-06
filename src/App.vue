@@ -1,5 +1,4 @@
 <template>
-
   <theme-button />
   <nav>
     <router-link to="/">Home</router-link> |
@@ -7,38 +6,22 @@
   </nav>
   <div class="container-center">
     <div class="card">
-      <router-view/>
+      <router-view />
     </div>
   </div>
 </template>
 
 <script>
-import ThemeButton from "@/components/ThemeButton.vue"
-
-export default {
-  name: "HomeView",
-
-  components: {
-    ThemeButton
-  },
-};
-
+  import ThemeButton from "@/components/ThemeButton.vue";
+  export default {
+    name: "HomeView",
+    components: {
+      ThemeButton,
+    },
+  };
 </script>
 
 <style>
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 
 html,
 body {
@@ -62,7 +45,9 @@ body {
   --text-primary-color: #ddd;
 }
 
-p, h1, label {
+p,
+h1,
+label {
   color: var(--text-primary-color);
 }
 
@@ -82,5 +67,17 @@ p, h1, label {
   text-align: center;
   background-color: var(--background-color-secondary);
 }
-</style>
 
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
