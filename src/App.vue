@@ -1,8 +1,8 @@
 <template>
-  <theme-button />
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+  <theme-button />
   </nav>
   <div class="container-center">
     <div class="card">
