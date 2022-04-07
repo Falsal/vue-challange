@@ -14,7 +14,7 @@
 <script>
   import ThemeButton from "@/components/ThemeButton.vue";
   export default {
-    name: "HomeView",
+    name: "App",
     components: {
       ThemeButton,
     },
